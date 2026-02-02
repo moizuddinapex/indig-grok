@@ -10,6 +10,7 @@
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
+      /* Background Image Fix */
       background: url('backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
@@ -22,23 +23,24 @@
       font-size: 2.2rem;
       font-weight: bold;
       letter-spacing: 2px;
-      position: relative;
     }
+    /* Logo moved to Top Left */
     .logo {
-      position: fixed;
+      position: absolute;
       top: 15px;
-      right: 20px;
+      left: 20px;
       z-index: 1000;
     }
     .logo img {
-      max-width: 140px;
+      max-width: 120px;
       height: auto;
     }
     .container {
       max-width: 1200px;
       margin: 40px auto;
       padding: 30px;
-      background: rgba(255, 255, 255, 0.92);
+      /* Semi-transparent background so you can see the background image behind it */
+      background: rgba(255, 255, 255, 0.9); 
       border-radius: 10px;
     }
     h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
@@ -65,7 +67,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .product-image {
-      height: 300px;
+      height: 350px;
       background: #f0f0f0;
     }
     .product-image img {
@@ -99,7 +101,7 @@
     footer {
       text-align: center;
       padding: 40px 20px;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.9);
       color: white;
       margin-top: 60px;
     }
@@ -124,41 +126,35 @@
   </header>
 
   <div class="container">
-
     <h1>Premium Men's Shirts Online in Pakistan</h1>
     <p class="description">
-      Elevate your wardrobe with indig-grok shirts — crafted for the modern gentleman. Discover refined formal, smart-casual, textured dobby, subtle stripes, and self-design pieces blending timeless elegance with everyday comfort. Premium fabrics, perfect fits, made for confidence.
+      Elevate your wardrobe with indig-grok shirts — crafted for the modern gentleman.
     </p>
 
     <div class="controls">
-      <span>Items: 369</span>
+      <span>Items: 3</span>
       <span>
         Sort by: 
         <select>
           <option>Featured</option>
-          <option>Best selling</option>
           <option>Price, low to high</option>
-          <option>Price, high to low</option>
         </select>
       </span>
     </div>
 
     <div class="products-grid">
-
       <div class="product-card">
         <div class="product-image">
-          <img src="product1.jpg" alt="Indigo Hairline Stripes Formal Shirt">
+          <img src="product1.jpg" alt="Indigo Hairline Stripes">
         </div>
         <div class="product-info">
           <div class="brand-label">INDIG-GROK</div>
-          <h3>Indigo Hairline Stripes Formal Shirt</h3>
-          <p>Refined sophistication in subtle indigo stripes. Regular fit luxury.</p>
+          <h3>Indigo Hairline Stripes</h3>
           <div>
             <span class="price">Rs 3,490</span>
             <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button class="view-btn">Quick View</button>
             <button class="add-btn">Quick Add</button>
           </div>
         </div>
@@ -166,18 +162,16 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="Product2.jpg" alt="White Dobby Textured Formal Shirt">
+          <img src="product2.jpg" alt="White Dobby Textured">
         </div>
         <div class="product-info">
           <div class="brand-label">INDIG-GROK</div>
-          <h3>White Dobby Textured Formal Shirt</h3>
-          <p>Elevated texture meets clean white elegance. Regular fit comfort.</p>
+          <h3>White Dobby Textured</h3>
           <div>
             <span class="price">Rs 3,490</span>
             <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button class="view-btn">Quick View</button>
             <button class="add-btn">Quick Add</button>
           </div>
         </div>
@@ -185,35 +179,25 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="product3.jpg" alt="Black Self-Textured Formal Shirt">
+          <img src="product3.jpg" alt="Black Self-Textured">
         </div>
         <div class="product-info">
           <div class="brand-label">INDIG-GROK</div>
-          <h3>Black Self-Textured Formal Shirt</h3>
-          <p>Understated luxury in deep black with micro-texture.</p>
+          <h3>Black Self-Textured</h3>
           <div>
             <span class="price">Rs 3,490</span>
             <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button class="view-btn">Quick View</button>
             <button class="add-btn">Quick Add</button>
           </div>
         </div>
       </div>
-
-      <!-- Add more cards here if you upload additional product images -->
 
     </div>
-
   </div>
 
   <footer>
-    <h3>Be the first to know about new drops, exclusive offers & events</h3>
-    <form>
-      <input type="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
     <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
   </footer>
 
