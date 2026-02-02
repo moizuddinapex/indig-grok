@@ -3,130 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Men's Shirts – indig-grok Pakistan</title>
+  <title>INDIG-GROK – Premium Men's Shirts</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
-      background: url('backgroundimagemage.jpg') no-repeat center center fixed;
+      background: url('backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
     }
     header {
-      padding: 20px 40px;
+      background: #000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
       position: relative;
-      min-height: 80px;
     }
     .logo {
       position: fixed;
-      top: 20px;
-      right: 30px;
+      top: 15px;
+      right: 20px;
       z-index: 1000;
     }
     .logo img {
-      max-width: 160px;
+      max-width: 140px;
       height: auto;
     }
     .container {
       max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background: rgba(255, 255, 255, 0.88); /* semi-transparent white overlay so text is readable over background */
-      border-radius: 12px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 10px;
     }
-    h1, h2, h3 { color: #0f0f1a; }
-    .collection-hero { text-align: center; margin-bottom: 40px; }
-    .controls { margin: 20px 0; font-weight: bold; }
+    h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
+    .description { text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px; }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
+      gap: 25px;
     }
     .product-card {
       background: white;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
-      padding-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .product-image {
-      height: 320px;
-      background: #f8f8f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 300px;
+      background: #f0f0f0;
     }
     .product-image img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
-    .product-info { padding: 15px; }
-    .price { font-size: 1.3rem; font-weight: bold; color: #4b0082; }
-    .original { text-decoration: line-through; color: #777; margin-left: 10px; }
-    .actions button {
-      margin: 6px;
-      padding: 10px 18px;
-      border: 1px solid #333;
-      background: #fff;
-      cursor: pointer;
+    .brand-label {
+      background: #000;
+      color: white;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      display: inline-block;
+      margin: 10px 0;
+      border-radius: 4px;
     }
-    .actions .add { background: #0f0f1a; color: white; }
+    .product-info { padding: 15px; }
+    .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
+    .original { text-decoration: line-through; color: #777; margin-left: 12px; }
+    .actions button {
+      margin: 8px 6px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .view-btn { background: #eee; color: #000; }
+    .add-btn { background: #000; color: white; }
     footer {
       text-align: center;
       padding: 40px 20px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
       color: white;
       margin-top: 60px;
     }
     footer form {
-      margin: 20px auto;
       max-width: 500px;
+      margin: 20px auto;
       display: flex;
       gap: 10px;
     }
-    footer input {
-      flex: 1;
-      padding: 12px;
-    }
-    footer button {
-      padding: 12px 24px;
-      background: #4b0082;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+    footer input { flex: 1; padding: 12px; border-radius: 5px; border: none; }
+    footer button { padding: 12px 30px; background: #4b0082; color: white; border: none; border-radius: 5px; cursor: pointer; }
   </style>
 </head>
 <body>
 
+  <div class="logo">
+    <img src="logo.png" alt="INDIG-GROK Logo">
+  </div>
+
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="indig-grok Logo">
-    </div>
+    INDIG-GROK
   </header>
 
   <div class="container">
 
-    <div class="collection-hero">
-      <h1>Premium Men's Shirts Online in Pakistan</h1>
-      <p>Elevate your wardrobe with indig-grok shirts — crafted for the modern gentleman. Refined formal, smart-casual, textured dobby, subtle stripes, and self-design pieces. Premium fabrics, perfect fits.</p>
-    </div>
+    <h1>Premium Men's Shirts Online in Pakistan</h1>
+    <p class="description">
+      Elevate your wardrobe with indig-grok shirts — crafted for the modern gentleman. Discover refined formal, smart-casual, textured dobby, subtle stripes, and self-design pieces blending timeless elegance with everyday comfort. Premium fabrics, perfect fits, made for confidence.
+    </p>
 
     <div class="controls">
       <span>Items: 369</span>
-          
-      <label for="sort">Sort by:</label>
-      <select id="sort">
-        <option>Featured</option>
-        <option>Best selling</option>
-        <option>Price, low to high</option>
-        <option>Price, high to low</option>
-      </select>
+      <span>
+        Sort by: 
+        <select>
+          <option>Featured</option>
+          <option>Best selling</option>
+          <option>Price, low to high</option>
+          <option>Price, high to low</option>
+        </select>
+      </span>
     </div>
 
     <div class="products-grid">
@@ -136,6 +150,7 @@
           <img src="product1.jpg" alt="Indigo Hairline Stripes Formal Shirt">
         </div>
         <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
           <h3>Indigo Hairline Stripes Formal Shirt</h3>
           <p>Refined sophistication in subtle indigo stripes. Regular fit luxury.</p>
           <div>
@@ -143,17 +158,18 @@
             <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button>Quick View</button>
-            <button class="add">Quick Add</button>
+            <button class="view-btn">Quick View</button>
+            <button class="add-btn">Quick Add</button>
           </div>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-image">
-          <img src="product2.jpg" alt="White Dobby Textured Formal Shirt">
+          <img src="Product2.jpg" alt="White Dobby Textured Formal Shirt">
         </div>
         <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
           <h3>White Dobby Textured Formal Shirt</h3>
           <p>Elevated texture meets clean white elegance. Regular fit comfort.</p>
           <div>
@@ -161,8 +177,8 @@
             <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button>Quick View</button>
-            <button class="add">Quick Add</button>
+            <button class="view-btn">Quick View</button>
+            <button class="add-btn">Quick Add</button>
           </div>
         </div>
       </div>
@@ -172,6 +188,7 @@
           <img src="product3.jpg" alt="Black Self-Textured Formal Shirt">
         </div>
         <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
           <h3>Black Self-Textured Formal Shirt</h3>
           <p>Understated luxury in deep black with micro-texture.</p>
           <div>
@@ -179,13 +196,13 @@
             <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button>Quick View</button>
-            <button class="add">Quick Add</button>
+            <button class="view-btn">Quick View</button>
+            <button class="add-btn">Quick Add</button>
           </div>
         </div>
       </div>
 
-      <!-- Add more product cards here manually if you upload more images later -->
+      <!-- Add more cards here if you upload additional product images -->
 
     </div>
 
@@ -197,7 +214,7 @@
       <input type="email" placeholder="Your email address" required>
       <button type="submit">Subscribe</button>
     </form>
-    <p>© 2026 indig-grok Pakistan. All rights reserved.</p>
+    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
   </footer>
 
 </body>
