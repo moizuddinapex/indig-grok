@@ -8,20 +8,22 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      /* Background Image Fix */
-      background: url('backgroundimage.jpg') no-repeat center center fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      /* Background Image Path Fixed */
+      background: url('images/backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
     }
     header {
       background: #000;
       color: white;
-      padding: 30px 20px;
+      padding: 20px;
       text-align: center;
       font-size: 2.2rem;
       font-weight: bold;
       letter-spacing: 2px;
+      position: relative;
     }
     /* Logo - Top Left Corner */
     .logo {
@@ -31,104 +33,131 @@
       z-index: 1000;
     }
     .logo img {
-      max-width: 100px;
+      max-width: 120px;
       height: auto;
     }
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 40px auto;
       padding: 30px;
-      /* Semi-transparent so background is visible */
-      background: rgba(255, 255, 255, 0.85); 
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      /* Semi-transparent background to see the background image */
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
+    h1 { text-align: center; font-size: 2.4rem; margin-bottom: 10px; }
+    .description { text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px; }
+    
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      gap: 25px;
     }
     .product-card {
-      background: #fff;
+      background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
       text-align: center;
+      transition: 0.3s;
     }
+    .product-card:hover { transform: translateY(-5px); }
     .product-image {
       height: 380px;
-      background: #f4f4f4;
+      background: #f0f0f0;
     }
     .product-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* This makes sure images look professional */
+      object-fit: cover;
     }
-    .product-info { padding: 20px; }
+    .brand-label {
+      background: #000;
+      color: white;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      margin: 15px 0 5px;
+    }
+    .product-info { padding: 15px; }
     .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
+    .original { text-decoration: line-through; color: #777; margin-left: 10px; font-size: 0.9rem; }
+    
     .add-btn {
       background: #000;
-      color: #fff;
-      border: none;
+      color: white;
       padding: 12px;
+      border: none;
       width: 100%;
       cursor: pointer;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 15px;
     }
     footer {
-      background: rgba(0,0,0,0.9);
-      color: white;
       text-align: center;
       padding: 40px;
-      margin-top: 50px;
+      background: rgba(0,0,0,0.9);
+      color: white;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
   <div class="logo">
-    <img src="logo.png" alt="Logo">
+    <img src="images/logo.png" alt="INDIG-GROK Logo">
   </div>
 
   <header>INDIG-GROK</header>
 
   <div class="container">
-    <h1 style="text-align:center;">Premium Men's Shirts</h1>
-    
+    <h1>Premium Men's Shirts</h1>
+    <p class="description">Elevate your wardrobe with refined pieces blending timeless elegance with everyday comfort.</p>
+
     <div class="products-grid">
+
       <div class="product-card">
-        <div class="product-image"><img src="product1.jpg" alt="Shirt 1"></div>
+        <div class="product-image">
+          <img src="images/product1.jpg" alt="Indigo Hairline Stripes">
+        </div>
         <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
           <h3>Indigo Hairline Stripes</h3>
-          <p class="price">Rs 3,490</p>
-          <button class="add-btn">Add to Cart</button>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-image"><img src="product2.jpg" alt="Shirt 2"></div>
+        <div class="product-image">
+          <img src="images/product2.jpg" alt="White Dobby Textured">
+        </div>
         <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
           <h3>White Dobby Textured</h3>
-          <p class="price">Rs 3,490</p>
-          <button class="add-btn">Add to Cart</button>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-image"><img src="product3.jpg" alt="Shirt 3"></div>
+        <div class="product-image">
+          <img src="images/product3.jpg" alt="Black Self-Textured">
+        </div>
         <div class="product-info">
+          <div class="brand-label">INDIG-GROK</div>
           <h3>Black Self-Textured</h3>
-          <p class="price">Rs 3,490</p>
-          <button class="add-btn">Add to Cart</button>
+          <span class="price">Rs 3,490</span><span class="original">Rs 4,490</span>
+          <button class="add-btn">Quick Add</button>
         </div>
       </div>
+
     </div>
   </div>
 
   <footer>
-    <p>© 2026 INDIG-GROK Pakistan</p>
+    <p>© 2026 INDIG-GROK Pakistan. All rights reserved.</p>
   </footer>
 
 </body>
