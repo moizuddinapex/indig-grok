@@ -1,408 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Premium Men's Shirts Online in Pakistan – indig-grok</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Men's Shirts – indig-grok Pakistan</title>
   <style>
-    :root {
-      --color-primary: #0f0f1a;
-      --color-accent: #4b0082;     /* indigo accent for brand feel */
-      --color-text: #2c2c2c;
-      --color-muted: #6b7280;
-      --bg-light: #fafafa;
-    }
-
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: url('backgroundimagemage.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
     }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      color: var(--color-text);
-      background: white;
-      line-height: 1.6;
-    }
-
     header {
-      background: var(--color-primary);
-      color: white;
-      padding: 1.4rem 5%;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      letter-spacing: 3px;
-      border-bottom: 1px solid #222;
+      padding: 20px 40px;
+      position: relative;
+      min-height: 80px;
     }
-
+    .logo {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index: 1000;
+    }
+    .logo img {
+      max-width: 160px;
+      height: auto;
+    }
     .container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 5%;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.88); /* semi-transparent white overlay so text is readable over background */
+      border-radius: 12px;
     }
-
-    .collection-hero {
-      text-align: center;
-      padding: 3.5rem 0 2.5rem;
-    }
-
-    .collection-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
-      color: var(--color-primary);
-    }
-
-    .collection-hero p {
-      max-width: 820px;
-      margin: 0 auto 1.8rem;
-      color: var(--color-muted);
-      font-size: 1.08rem;
-    }
-
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      padding: 1.4rem 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 2.5rem;
-    }
-
-    .items-count {
-      font-weight: 600;
-      color: var(--color-primary);
-    }
-
-    .sort-group {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-    }
-
-    .sort-group label {
-      font-weight: 500;
-    }
-
-    select {
-      padding: 0.7rem 1.1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background: white;
-      font-size: 0.97rem;
-      min-width: 240px;
-    }
-
+    h1, h2, h3 { color: #0f0f1a; }
+    .collection-hero { text-align: center; margin-bottom: 40px; }
+    .controls { margin: 20px 0; font-weight: bold; }
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2.2rem 1.8rem;
-      margin-bottom: 5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
     }
-
     .product-card {
       background: white;
-      border: 1px solid #eee;
+      border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
-      transition: all 0.2s ease;
-      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 20px;
     }
-
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.09);
-      border-color: #ddd;
-    }
-
     .product-image {
-      height: 400px;
+      height: 320px;
       background: #f8f8f8;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
-      color: #bbb;
-      position: relative;
     }
-
-    .brand-label {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: rgba(0,0,0,0.8);
-      color: white;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 0.4rem 0.9rem;
-      border-radius: 4px;
-      letter-spacing: 1.2px;
+    .product-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
     }
-
-    .product-info {
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .product-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      color: var(--color-primary);
-      min-height: 3ch;
-    }
-
-    .product-desc {
-      font-size: 0.93rem;
-      color: var(--color-muted);
-      margin-bottom: 1rem;
-      line-height: 1.45;
-    }
-
-    .price-container {
-      margin-bottom: 1.1rem;
-    }
-
-    .current-price {
-      font-size: 1.28rem;
-      font-weight: 700;
-      color: var(--color-accent);
-    }
-
-    .original-price {
-      font-size: 1.05rem;
-      color: var(--color-muted);
-      text-decoration: line-through;
-      margin-left: 0.7rem;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-top: 0.6rem;
-    }
-
-    .btn {
-      padding: 0.7rem 1.5rem;
-      border: 1px solid var(--color-primary);
-      border-radius: 5px;
-      font-weight: 500;
+    .product-info { padding: 15px; }
+    .price { font-size: 1.3rem; font-weight: bold; color: #4b0082; }
+    .original { text-decoration: line-through; color: #777; margin-left: 10px; }
+    .actions button {
+      margin: 6px;
+      padding: 10px 18px;
+      border: 1px solid #333;
+      background: #fff;
       cursor: pointer;
-      transition: 0.22s;
-      font-size: 0.95rem;
     }
-
-    .btn-view {
-      background: white;
-      color: var(--color-primary);
-    }
-
-    .btn-add {
-      background: var(--color-primary);
-      color: white;
-    }
-
-    .btn:hover {
-      opacity: 0.94;
-      transform: scale(1.02);
-    }
-
+    .actions .add { background: #0f0f1a; color: white; }
     footer {
-      background: #f9f9f9;
-      padding: 3.5rem 5% 2.5rem;
       text-align: center;
-      border-top: 1px solid #eee;
-      color: #555;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      margin-top: 60px;
     }
-
-    .newsletter {
-      max-width: 620px;
-      margin: 0 auto 3rem;
-    }
-
-    .newsletter h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1.2rem;
-      color: var(--color-primary);
-    }
-
-    .newsletter form {
+    footer form {
+      margin: 20px auto;
+      max-width: 500px;
       display: flex;
-      max-width: 460px;
-      margin: 0 auto;
-      gap: 0.6rem;
+      gap: 10px;
     }
-
-    .newsletter input {
+    footer input {
       flex: 1;
-      padding: 0.85rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 0.97rem;
+      padding: 12px;
     }
-
-    .newsletter button {
-      padding: 0.85rem 1.8rem;
-      background: var(--color-primary);
+    footer button {
+      padding: 12px 24px;
+      background: #4b0082;
       color: white;
       border: none;
-      border-radius: 5px;
-      font-weight: 500;
       cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      header { font-size: 2rem; }
-      .collection-hero h1 { font-size: 2.2rem; }
-      .controls { flex-direction: column; align-items: stretch; }
-      .products-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
     }
   </style>
 </head>
 <body>
 
-  <header>INDIG-GROK</header>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="indig-grok Logo">
+    </div>
+  </header>
 
   <div class="container">
 
     <div class="collection-hero">
       <h1>Premium Men's Shirts Online in Pakistan</h1>
-      <p>Elevate your wardrobe with indig-grok shirts — crafted for the modern gentleman. Discover refined formal, smart-casual, textured dobby, subtle stripes, and self-design pieces blending timeless elegance with everyday comfort. Premium fabrics, perfect fits, made for confidence.</p>
+      <p>Elevate your wardrobe with indig-grok shirts — crafted for the modern gentleman. Refined formal, smart-casual, textured dobby, subtle stripes, and self-design pieces. Premium fabrics, perfect fits.</p>
     </div>
 
     <div class="controls">
-      <div class="items-count">Items: 369</div>
-      <div class="sort-group">
-        <label for="sort">Sort by:</label>
-        <select id="sort">
-          <option>Featured</option>
-          <option>Best selling</option>
-          <option>Alphabetically, A-Z</option>
-          <option>Alphabetically, Z-A</option>
-          <option>Price, low to high</option>
-          <option>Price, high to low</option>
-          <option>Date, old to new</option>
-          <option>Date, new to old</option>
-        </select>
-      </div>
+      <span>Items: 369</span>
+          
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option>Featured</option>
+        <option>Best selling</option>
+        <option>Price, low to high</option>
+        <option>Price, high to low</option>
+      </select>
     </div>
 
     <div class="products-grid">
 
-      <!-- Product 1 -->
       <div class="product-card">
         <div class="product-image">
-          <div class="brand-label">INDIG-GROK</div>
-          [ Shirt Image – Indigo Hairline ]
+          <img src="product1.jpg" alt="Indigo Hairline Stripes Formal Shirt">
         </div>
         <div class="product-info">
-          <h3 class="product-title">Indigo Hairline Stripes Formal Shirt</h3>
-          <p class="product-desc">Refined sophistication in subtle indigo stripes. Regular fit luxury — ideal for boardrooms or evening events. Pair with tailored trousers for effortless style.</p>
-          <div class="price-container">
-            <span class="current-price">Rs 3,490</span>
-            <span class="original-price">Rs 4,490</span>
+          <h3>Indigo Hairline Stripes Formal Shirt</h3>
+          <p>Refined sophistication in subtle indigo stripes. Regular fit luxury.</p>
+          <div>
+            <span class="price">Rs 3,490</span>
+            <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button class="btn btn-view">Quick View</button>
-            <button class="btn btn-add">Quick Add</button>
+            <button>Quick View</button>
+            <button class="add">Quick Add</button>
           </div>
         </div>
       </div>
 
-      <!-- Product 2 -->
       <div class="product-card">
         <div class="product-image">
-          <div class="brand-label">INDIG-GROK</div>
-          [ Shirt Image – White Dobby ]
+          <img src="product2.jpg" alt="White Dobby Textured Formal Shirt">
         </div>
         <div class="product-info">
-          <h3 class="product-title">White Dobby Textured Formal Shirt</h3>
-          <p class="product-desc">Elevated texture meets clean white elegance. Regular fit comfort with subtle dobby weave — perfect for the discerning gentleman.</p>
-          <div class="price-container">
-            <span class="current-price">Rs 3,490</span>
-            <span class="original-price">Rs 4,490</span>
+          <h3>White Dobby Textured Formal Shirt</h3>
+          <p>Elevated texture meets clean white elegance. Regular fit comfort.</p>
+          <div>
+            <span class="price">Rs 3,490</span>
+            <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button class="btn btn-view">Quick View</button>
-            <button class="btn btn-add">Quick Add</button>
+            <button>Quick View</button>
+            <button class="add">Quick Add</button>
           </div>
         </div>
       </div>
 
-      <!-- Product 3 -->
       <div class="product-card">
         <div class="product-image">
-          <div class="brand-label">INDIG-GROK</div>
-          [ Shirt Image – Black Self ]
+          <img src="product3.jpg" alt="Black Self-Textured Formal Shirt">
         </div>
         <div class="product-info">
-          <h3 class="product-title">Black Self-Textured Formal Shirt</h3>
-          <p class="product-desc">Understated luxury in deep black with micro-texture. Timeless regular fit for any formal occasion.</p>
-          <div class="price-container">
-            <span class="current-price">Rs 3,490</span>
-            <span class="original-price">Rs 4,490</span>
+          <h3>Black Self-Textured Formal Shirt</h3>
+          <p>Understated luxury in deep black with micro-texture.</p>
+          <div>
+            <span class="price">Rs 3,490</span>
+            <span class="original">Rs 4,490</span>
           </div>
           <div class="actions">
-            <button class="btn btn-view">Quick View</button>
-            <button class="btn btn-add">Quick Add</button>
+            <button>Quick View</button>
+            <button class="add">Quick Add</button>
           </div>
         </div>
       </div>
 
-      <!-- Product 4 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="brand-label">INDIG-GROK</div>
-          [ Shirt Image – Fawn Twill ]
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Fawn Self Twill Formal Shirt</h3>
-          <p class="product-desc">Warm neutral tone with smooth twill weave. Versatile regular fit for office-to-evening transitions.</p>
-          <div class="price-container">
-            <span class="current-price">Rs 3,490</span>
-            <span class="original-price">Rs 4,490</span>
-          </div>
-          <div class="actions">
-            <button class="btn btn-view">Quick View</button>
-            <button class="btn btn-add">Quick Add</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add more cards here following the same structure -->
+      <!-- Add more product cards here manually if you upload more images later -->
 
     </div>
 
   </div>
 
   <footer>
-    <div class="newsletter">
-      <h3>Be the first to know about new drops, exclusive offers & events</h3>
-      <form>
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+    <h3>Be the first to know about new drops, exclusive offers & events</h3>
+    <form>
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
     <p>© 2026 indig-grok Pakistan. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Demo click feedback
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        alert(btn.textContent.trim() + ' clicked! (demo action)');
-      });
-    });
-  </script>
 
 </body>
 </html>
