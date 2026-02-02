@@ -8,9 +8,8 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111;
-      /* Fixed: Background Image setup */
+      font-family: Arial, sans-serif;
+      /* Background Image Fix */
       background: url('backgroundimage.jpg') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
@@ -18,13 +17,13 @@
     header {
       background: #000;
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
       font-size: 2.2rem;
       font-weight: bold;
       letter-spacing: 2px;
     }
-    /* Fixed: Logo on Top Left */
+    /* Logo - Top Left Corner */
     .logo {
       position: absolute;
       top: 15px;
@@ -32,86 +31,104 @@
       z-index: 1000;
     }
     .logo img {
-      max-width: 140px;
+      max-width: 100px;
       height: auto;
     }
     .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 30px;
-      /* Semi-transparent so you can see the background image */
-      background: rgba(255, 255, 255, 0.9); 
-      border-radius: 10px;
+      /* Semi-transparent so background is visible */
+      background: rgba(255, 255, 255, 0.85); 
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 30px;
+      margin-top: 30px;
     }
     .product-card {
-      background: white;
-      border: 1px solid #ccc;
+      background: #fff;
+      border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
       text-align: center;
     }
-    .product-image { height: 350px; background: #f0f0f0; }
-    .product-image img { width: 100%; height: 100%; object-fit: cover; }
-    .brand-label { background: #000; color: white; padding: 6px 12px; font-size: 0.9rem; display: inline-block; margin: 10px 0; }
+    .product-image {
+      height: 380px;
+      background: #f4f4f4;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* This makes sure images look professional */
+    }
+    .product-info { padding: 20px; }
     .price { font-size: 1.4rem; font-weight: bold; color: #4b0082; }
-    .add-btn { background: #000; color: white; padding: 10px 20px; border: none; width: 100%; cursor: pointer; }
-    footer { text-align: center; padding: 40px; background: rgba(0,0,0,0.8); color: white; margin-top: 60px; }
+    .add-btn {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    footer {
+      background: rgba(0,0,0,0.9);
+      color: white;
+      text-align: center;
+      padding: 40px;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
 
   <div class="logo">
-    <img src="logo.png" alt="INDIG-GROK Logo">
+    <img src="logo.png" alt="Logo">
   </div>
 
   <header>INDIG-GROK</header>
 
   <div class="container">
-    <h1>Premium Men's Shirts</h1>
-    <p style="text-align:center;">Elevate your wardrobe with refined style.</p>
-
+    <h1 style="text-align:center;">Premium Men's Shirts</h1>
+    
     <div class="products-grid">
-
       <div class="product-card">
         <div class="product-image"><img src="product1.jpg" alt="Shirt 1"></div>
         <div class="product-info">
-          <div class="brand-label">INDIG-GROK</div>
           <h3>Indigo Hairline Stripes</h3>
           <p class="price">Rs 3,490</p>
-          <button class="add-btn">Quick Add</button>
+          <button class="add-btn">Add to Cart</button>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-image"><img src="product2.jpg" alt="Shirt 2"></div>
         <div class="product-info">
-          <div class="brand-label">INDIG-GROK</div>
           <h3>White Dobby Textured</h3>
           <p class="price">Rs 3,490</p>
-          <button class="add-btn">Quick Add</button>
+          <button class="add-btn">Add to Cart</button>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-image"><img src="product3.jpg" alt="Shirt 3"></div>
         <div class="product-info">
-          <div class="brand-label">INDIG-GROK</div>
           <h3>Black Self-Textured</h3>
           <p class="price">Rs 3,490</p>
-          <button class="add-btn">Quick Add</button>
+          <button class="add-btn">Add to Cart</button>
         </div>
       </div>
-
     </div>
   </div>
 
   <footer>
-    <p>© 2026 INDIG-GROK Pakistan.</p>
+    <p>© 2026 INDIG-GROK Pakistan</p>
   </footer>
 
 </body>
