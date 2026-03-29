@@ -1,230 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andli - Premium Tactical Footwear</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: #f8f9fa;
-            color: #222;
-        }
-        
-        header {
-            background: white;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .top-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 40px;
-        }
-        
-        .logo {
-            font-size: 32px;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-        
-        .logo span {
-            color: #e76f51;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 36px;
-            font-weight: 500;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #222;
-        }
-        
-        .right-actions {
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            font-size: 20px;
-        }
-        
-        .hero {
-            height: 680px;
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1015/1920/1080') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .hero-content {
-            text-align: center;
-            color: white;
-        }
-        
-        .hero-content h1 {
-            font-size: 58px;
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-        
-        .hero-content p {
-            font-size: 19px;
-            max-width: 620px;
-        }
-        
-        .product-showcase {
-            padding: 80px 40px;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 38px;
-            font-weight: 700;
-            margin-bottom: 60px;
-        }
-        
-        .sneaker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        
-        .sneaker-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-        }
-        
-        .sneaker-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
-        
-        .sneaker-image {
-            height: 280px;
-            background: #f1f3f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .sneaker-image img {
-            max-height: 92%;
-            filter: drop-shadow(8px 12px 18px rgba(0,0,0,0.25));
-        }
-        
-        .sneaker-info {
-            padding: 22px;
-            text-align: center;
-        }
-        
-        .sneaker-name {
-            font-weight: 600;
-            font-size: 17px;
-        }
-        
-        .sneaker-price {
-            color: #e76f51;
-            font-weight: 700;
-            margin-top: 6px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>ANDLI | Tactical Performance Footwear</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0c10;
+      color: #eef2f5;
+      line-height: 1.5;
+    }
+
+    /* Full Screen Hero Wallpaper */
+    .hero-wallpaper {
+      position: relative;
+      background-image: url('https://raw.githubusercontent.com/moizuddinapex/indig-grok/main/Images/backgroundimage1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-wallpaper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(220, 38, 38, 0.8);
+      backdrop-filter: blur(4px);
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+
+    .btn-hero {
+      background: #dc2626;
+      color: white;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-hero:hover {
+      background: #b91c1c;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(220,38,38,0.3);
+    }
+
+    .btn-hero-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 12px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-left: 15px;
+    }
+
+    .btn-hero-outline:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* navbar - transparent over hero */
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      background: #dc2626;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: white;
+    }
+    .logo span {
+      color: #dc2626;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #ffffff;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #dc2626;
+    }
+
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,0.5);
+      background: transparent;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: white;
+    }
+    .btn-outline:hover {
+      border-color: #dc2626;
+      background: rgba(220,38,38,0.2);
+    }
+
+    /* products section */
+    .products-section {
+      padding: 80px 0;
+      background: #0f1117;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #9ca3af;
+      max-width: 680px;
+      margin: 0 auto 48px auto;
+    }
+
+    .sneaker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: #1a1d24;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(220,38,38,0.3);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+    }
+
+    .product-image {
+      background: #252a33;
+      padding: 30px;
+      text-align: center;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .product-desc {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #dc2626;
+      margin-bottom: 16px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #6b7280;
+      font-size: 1rem;
+      margin-left: 8px;
+      font-weight: 400;
+    }
+
+    .btn-card {
+      background: transparent;
+      border: 1.5px solid #dc2626;
+      color: #dc2626;
+      padding: 10px 30px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .btn-card:hover {
+      background: #dc2626;
+      color: white;
+    }
+
+    /* features section */
+    .features-section {
+      background: #0a0c10;
+      padding: 70px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      color: #dc2626;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      color: #9ca3af;
+    }
+
+    /* footer */
+    .footer {
+      background: #060708;
+      padding: 56px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col h4 {
+      color: #dc2626;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #9ca3af;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #dc2626;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .social-icons a {
+      font-size: 1.3rem;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      .btn-hero, .btn-hero-outline {
+        display: block;
+        margin: 10px auto;
+      }
+      .btn-hero-outline {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="top-nav">
-            <div class="logo">Andli <span>PREMIUM</span></div>
-            
-            <div class="nav-links">
-                <a href="#">HOME</a>
-                <a href="#">YEEZY</a>
-                <a href="#">NIKE</a>
-                <a href="#">NEW DROPS</a>
-                <a href="#">COLLECTIONS</a>
-                <a href="#">KICKS</a>
-                <a href="#">HATS</a>
-            </div>
-            
-            <div class="right-actions">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-cart"></i>
-                <i class="fas fa-user"></i>
-                <button style="background:#111; color:white; padding:10px 26px; border-radius:30px; font-weight:600;">BECOME A MEMBER</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- HERO - Tactical Forest Scene -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>ANDLI</h1>
-            <p>Built for the battlefield.<br>Designed for everyday dominance.</p>
-        </div>
+  <!-- Transparent Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-boot"></i></div>
+      <h1>ANDLI<span>Tactical</span></h1>
     </div>
-
-    <!-- SNEAKER SHOWCASE -->
-    <div class="product-showcase">
-        <h2 class="section-title">Signature Tactical Series</h2>
-        
-        <div class="sneaker-grid">
-            <div class="sneaker-card">
-                <div class="sneaker-image">
-                    <img src="https://picsum.photos/id/201/420/300" alt="Grey Tactical Sneaker">
-                </div>
-                <div class="sneaker-info">
-                    <div class="sneaker-name">ShadowStrike Low</div>
-                    <div class="sneaker-price">$179</div>
-                </div>
-            </div>
-            
-            <div class="sneaker-card">
-                <div class="sneaker-image">
-                    <img src="https://picsum.photos/id/866/420/300" alt="Black Camo">
-                </div>
-                <div class="sneaker-info">
-                    <div class="sneaker-name">PhantomForce Mid</div>
-                    <div class="sneaker-price">$199</div>
-                </div>
-            </div>
-            
-            <div class="sneaker-card">
-                <div class="sneaker-image">
-                    <img src="https://picsum.photos/id/1015/420/300" alt="Urban Assault">
-                </div>
-                <div class="sneaker-info">
-                    <div class="sneaker-name">Urban Assault Runner</div>
-                    <div class="sneaker-price">$169</div>
-                </div>
-            </div>
-            
-            <div class="sneaker-card">
-                <div class="sneaker-image">
-                    <img src="https://picsum.photos/id/237/420/300" alt="Orange Accent">
-                </div>
-                <div class="sneaker-info">
-                    <div class="sneaker-name">Inferno Trail Pro</div>
-                    <div class="sneaker-price">$189</div>
-                </div>
-            </div>
-        </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Collection</a>
+      <a href="#">Series</a>
+      <a href="#">Technology</a>
+      <a href="#">Journal</a>
+      <button class="btn-outline" id="trackBtn"><i class="fas fa-truck"></i> Track Order</button>
     </div>
+  </div>
 
+  <!-- Full Screen Hero Wallpaper with backgroundimage1.jpg -->
+  <section class="hero-wallpaper">
+    <div class="hero-content">
+      <div class="hero-badge">LIMITED EDITION • SPRING 2026</div>
+      <h1>ANDLI</h1>
+      <p>Engineered for the extreme. Built for those who never quit.</p>
+      <div>
+        <button class="btn-hero" id="shopNowBtn"><i class="fas fa-bolt"></i> Shop Now</button>
+        <button class="btn-hero-outline" id="exploreBtn"><i class="fas fa-arrow-right"></i> Explore Collection</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <h2 class="section-title">Tactical Performance Series</h2>
+      <p class="section-sub">Military‑inspired engineering • Carbon fiber reinforcements • Vibram® grip</p>
+
+      <div class="sneaker-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=400" alt="ShadowStrike Runner">
+          </div>
+          <div class="product-info">
+            <div class="product-name">ShadowStrike Runner</div>
+            <div class="product-desc">Lightweight armorweave • breathable mesh</div>
+            <div class="price">$179 <span class="old-price">$229</span></div>
+            <button class="btn-card add-to-cart" data-name="ShadowStrike Runner">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400" alt="PhantomForce Low">
+          </div>
+          <div class="product-info">
+            <div class="product-name">PhantomForce Low</div>
+            <div class="product-desc">Stealth rubber outsole • 3M reflective details</div>
+            <div class="price">$159 <span class="old-price">$199</span></div>
+            <button class="btn-card add-to-cart" data-name="PhantomForce Low">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Urban Assault Mid">
+          </div>
+          <div class="product-info">
+            <div class="product-name">Urban Assault Mid</div>
+            <div class="product-desc">Reinforced ankle support • gore-tex lining</div>
+            <div class="price">$199 <span class="old-price">$259</span></div>
+            <button class="btn-card add-to-cart" data-name="Urban Assault Mid">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400" alt="Inferno Trail">
+          </div>
+          <div class="product-info">
+            <div class="product-name">Inferno Trail</div>
+            <div class="product-desc">Aggressive lug pattern • flame-resistant upper</div>
+            <div class="price">$169 <span class="old-price">$209</span></div>
+            <button class="btn-card add-to-cart" data-name="Inferno Trail">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Kevlar® Reinforced</h4>
+          <p>Military-grade durability</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-feather-alt"></i></div>
+          <h4>Adaptive Cushioning</h4>
+          <p>Maximum comfort on any terrain</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-globe-americas"></i></div>
+          <h4>Carbon-Neutral</h4>
+          <p>Sustainable manufacturing</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+          <h4>2-Year Warranty</h4>
+          <p>Built to last</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>ANDLI Tactical</h4>
+          <p>Premium tactical footwear engineered for extreme performance and urban dominance.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#">New Arrivals</a>
+          <a href="#">Men's Collection</a>
+          <a href="#">Tactical Series</a>
+          <a href="#">Limited Edition</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Size Guide</a>
+          <a href="#">Order Tracking</a>
+          <a href="#">Returns & Exchanges</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone-alt"></i> +1 (800) 555-0123</p>
+          <p><i class="fas fa-envelope"></i> support@andli.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 ANDLI Tactical — Engineered for the extreme. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add to cart functionality
+    const cartButtons = document.querySelectorAll('.add-to-cart');
+    cartButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const productName = btn.getAttribute('data-name');
+        alert(`🛒 "${productName}" added to your cart! Continue shopping.`);
+      });
+    });
+
+    // Shop Now button scroll to products
+    const shopBtn = document.getElementById('shopNowBtn');
+    if(shopBtn) {
+      shopBtn.addEventListener('click', () => {
+        document.getElementById('products')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    // Explore button scroll
+    const exploreBtn = document.getElementById('exploreBtn');
+    if(exploreBtn) {
+      exploreBtn.addEventListener('click', () => {
+        document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // Track order button
+    const trackBtn = document.getElementById('trackBtn');
+    if(trackBtn) {
+      trackBtn.addEventListener('click', () => {
+        alert("📦 Track your order: Please enter your order ID on the next page.");
+      });
+    }
+
+    console.log("ANDLI Tactical — Premium footwear website ready");
+  </script>
 </body>
 </html>
