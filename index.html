@@ -3,291 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andli - Premium Tactical Shoes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Andli - Tactical Premium Sneakers</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
-        :root {
-            --primary: #111;
-            --accent: #f4a261;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
             background: #f8f9fa;
-            color: #222;
         }
         
-        /* Header */
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .top-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 40px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: -2px;
-        }
-        
-        .logo span {
-            color: var(--accent);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            font-weight: 500;
-            font-size: 15px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #222;
-            transition: color 0.2s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-        
-        .right-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .search-icon, .cart-icon, .user-icon {
-            font-size: 20px;
-            cursor: pointer;
-        }
-        
-        .cta-button {
-            background: #000;
-            color: white;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        /* Hero */
         .hero {
             position: relative;
             height: 620px;
-            overflow: hidden;
-        }
-        
-        .hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
             display: flex;
-            gap: 20px;
-            background: rgba(255,255,255,0.95);
-            padding: 12px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
         }
         
-        .thumb {
-            width: 180px;
-            height: 120px;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 3px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        .hero-content h1 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
         
-        .thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .hero-content p {
+            font-size: 18px;
+            max-width: 600px;
         }
         
-        /* Products */
-        .products {
+        .product-showcase {
             padding: 60px 40px;
+            background: white;
         }
         
         .section-title {
             text-align: center;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
-        .product-grid {
+        .sneaker-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .product-card {
-            background: white;
+        .sneaker-card {
+            background: #fff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
         }
         
-        .product-card:hover {
-            transform: translateY(-12px);
+        .sneaker-card:hover {
+            transform: scale(1.04);
         }
         
-        .product-image {
-            height: 260px;
-            background: #f1f1f1;
+        .sneaker-image {
+            height: 240px;
+            background: #f1f3f5;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        
-        .product-image img {
-            max-height: 85%;
-        }
-        
-        .product-info {
             padding: 20px;
         }
         
-        .product-name {
-            font-weight: 600;
-            margin-bottom: 8px;
+        .sneaker-image img {
+            max-height: 100%;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
         }
         
-        .product-price {
-            color: var(--accent);
-            font-weight: 700;
-        }
-        
-        /* Footer */
-        footer {
-            background: #111;
-            color: #aaa;
-            padding: 60px 40px 30px;
+        .sneaker-info {
+            padding: 18px;
             text-align: center;
+        }
+        
+        .sneaker-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .sneaker-price {
+            color: #e76f51;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="top-nav">
-            <div class="logo">Andli <span style="font-size:18px;">PREMIUM</span></div>
-            
-            <div class="nav-links">
-                <a href="#">HOME</a>
-                <a href="#">YEEZY</a>
-                <a href="#">NIKE</a>
-                <a href="#">NEW COLLECTION</a>
-                <a href="#">COLLECTION</a>
-                <a href="#">KICK</a>
-                <a href="#">HATS</a>
-                <a href="#">SNEAKERS</a>
-            </div>
-            
-            <div class="right-actions">
-                <i class="fas fa-search search-icon"></i>
-                <i class="fas fa-shopping-cart cart-icon"></i>
-                <i class="fas fa-user user-icon"></i>
-                <button class="cta-button">BECOME A MEMBER</button>
-            </div>
-        </div>
-    </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION - Tactical Scene -->
     <div class="hero">
-        <img src="https://picsum.photos/id/1015/1920/1080" alt="Tactical Soldier" style="filter: brightness(0.85);">
-        
-        <div class="hero-overlay">
-            <div class="thumb">
-                <img src="https://picsum.photos/id/201/400/280" alt="Sneaker 1">
-            </div>
-            <div class="thumb">
-                <img src="https://picsum.photos/id/237/400/280" alt="Sneaker 2">
-            </div>
-            <div class="thumb">
-                <img src="https://picsum.photos/id/866/400/280" alt="Sneaker 3">
-            </div>
+        <div class="hero-content">
+            <h1>ANDLI</h1>
+            <p>Engineered for the extreme.<br>Built for those who never quit.</p>
         </div>
     </div>
 
-    <!-- PRODUCTS -->
-    <div class="products">
-        <h2 class="section-title">Featured Collection</h2>
+    <!-- SNEAKER SHOWCASE -->
+    <div class="product-showcase">
+        <h2 class="section-title">Tactical Performance Series</h2>
         
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://picsum.photos/id/201/400/300" alt="Bape x NB">
+        <div class="sneaker-grid">
+            
+            <!-- Shoe 1 -->
+            <div class="sneaker-card">
+                <div class="sneaker-image">
+                    <img src="https://picsum.photos/id/201/400/280" alt="Grey Tactical Runner">
                 </div>
-                <div class="product-info">
-                    <div class="product-name">Bape x NB 1906R</div>
-                    <div class="product-price">$189</div>
+                <div class="sneaker-info">
+                    <div class="sneaker-name">ShadowStrike Runner</div>
+                    <div class="sneaker-price">$179</div>
                 </div>
             </div>
             
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://picsum.photos/id/237/400/300" alt="Yeezy Boost">
+            <!-- Shoe 2 -->
+            <div class="sneaker-card">
+                <div class="sneaker-image">
+                    <img src="https://picsum.photos/id/866/400/280" alt="Black Camo Sneaker">
                 </div>
-                <div class="product-info">
-                    <div class="product-name">Yeezy Boost 350 V2</div>
-                    <div class="product-price">$220</div>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://picsum.photos/id/866/400/300" alt="Tactical Runner">
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Tactical Runner Pro</div>
-                    <div class="product-price">$149</div>
+                <div class="sneaker-info">
+                    <div class="sneaker-name">PhantomForce Low</div>
+                    <div class="sneaker-price">$159</div>
                 </div>
             </div>
             
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://picsum.photos/id/1015/400/300" alt="Urban Camo">
+            <!-- Shoe 3 -->
+            <div class="sneaker-card">
+                <div class="sneaker-image">
+                    <img src="https://picsum.photos/id/1015/400/280" alt="Urban Combat Boot">
                 </div>
-                <div class="product-info">
-                    <div class="product-name">Urban Camo Edition</div>
-                    <div class="product-price">$169</div>
+                <div class="sneaker-info">
+                    <div class="sneaker-name">Urban Assault Mid</div>
+                    <div class="sneaker-price">$199</div>
+                </div>
+            </div>
+            
+            <!-- Shoe 4 -->
+            <div class="sneaker-card">
+                <div class="sneaker-image">
+                    <img src="https://picsum.photos/id/237/400/280" alt="Orange Accent Sneaker">
+                </div>
+                <div class="sneaker-info">
+                    <div class="sneaker-name">Inferno Trail</div>
+                    <div class="sneaker-price">$169</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Andli Premium Shoes • All Rights Reserved</p>
-        <p style="margin-top: 12px; font-size: 13px;">Built as a demo by Grok</p>
-    </footer>
 </body>
 </html>
