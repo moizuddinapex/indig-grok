@@ -23,10 +23,10 @@
       line-height: 1.5;
     }
 
-    /* Full Screen Hero Wallpaper */
+    /* Full Screen Hero Wallpaper with CORRECT image path */
     .hero-wallpaper {
       position: relative;
-      background-image: url('https://raw.githubusercontent.com/moizuddinapex/indig-grok/main/Images/backgroundimage1.jpg');
+      background-image: url('https://raw.githubusercontent.com/moizuddinapex/indig-grok/main/images/backgroundimage1.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -39,6 +39,7 @@
       color: white;
     }
 
+    /* Fallback if image doesn't load */
     .hero-wallpaper::before {
       content: '';
       position: absolute;
@@ -46,7 +47,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.55);
       z-index: 1;
     }
 
@@ -73,7 +74,7 @@
 
     .hero-badge {
       display: inline-block;
-      background: rgba(220, 38, 38, 0.8);
+      background: rgba(220, 38, 38, 0.85);
       backdrop-filter: blur(4px);
       padding: 8px 20px;
       border-radius: 40px;
@@ -444,7 +445,7 @@
     </div>
   </div>
 
-  <!-- Full Screen Hero Wallpaper with backgroundimage1.jpg -->
+  <!-- Full Screen Hero Wallpaper with backgroundimage1.jpg from correct path -->
   <section class="hero-wallpaper">
     <div class="hero-content">
       <div class="hero-badge">LIMITED EDITION • SPRING 2026</div>
@@ -622,7 +623,7 @@
       });
     }
 
-    console.log("ANDLI Tactical — Premium footwear website ready");
+    console.log("ANDLI Tactical — Premium footwear website ready with background image");
   </script>
 </body>
 </html>
