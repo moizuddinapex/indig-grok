@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>ANDLI | Tactical Performance Sneakers</title>
+    <title>ANDLI | Tactical Luxury</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -14,30 +14,27 @@
         }
 
         body {
+            background-color: #030303;
             font-family: 'Inter', sans-serif;
-            background-color: #0a0c10;
-            color: #eef2f5;
-            line-height: 1.5;
+            color: #eaeef2;
+            line-height: 1.4;
         }
 
-        /* premium dark tactical theme */
-        .container {
-            max-width: 1400px;
+        /* main container */
+        .site-wrapper {
+            max-width: 1440px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 40px;
         }
 
-        /* header / navigation */
-        .site-header {
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 20px;
-        }
-
-        .nav {
+        /* header / navigation inspired by high-end editorial */
+        .top-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 40px;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -46,7 +43,7 @@
             font-size: 28px;
             font-weight: 800;
             letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #9ca3af 100%);
+            background: linear-gradient(120deg, #ffffff, #a1a9b6);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -54,406 +51,380 @@
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 36px;
             font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.3px;
         }
 
         .nav-links a {
-            color: #e5e7eb;
+            color: #cfd5e0;
             text-decoration: none;
-            font-size: 15px;
             transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #ffffff;
-        }
-
-        .btn-outline-light {
-            border: 1px solid rgba(255,255,255,0.3);
-            background: transparent;
-            padding: 8px 20px;
-            border-radius: 40px;
             color: white;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
         }
 
-        .btn-outline-light:hover {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.6);
-        }
-
-        /* hero section — premium, no generic image */
-        .hero {
-            padding: 80px 0 100px;
+        /* hero / main visual — exactly the dark, bold, split-sphere concept */
+        .hero-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            position: relative;
+            padding: 40px 0 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 70px;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(220, 38, 38, 0.2);
-            backdrop-filter: blur(4px);
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #f87171;
-            margin-bottom: 24px;
-            border: 1px solid rgba(220,38,38,0.3);
+        .main-graphic {
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto 32px;
+            filter: drop-shadow(0 20px 25px -12px rgba(0,0,0,0.6));
         }
 
-        .hero h1 {
-            font-size: 72px;
+        .main-graphic svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-visual h1 {
+            font-size: 68px;
             font-weight: 800;
             letter-spacing: -2px;
-            background: linear-gradient(to right, #ffffff, #cbd5e6);
+            background: linear-gradient(to bottom, #ffffff, #b9c2d4);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .hero p {
-            font-size: 20px;
+        .hero-tagline {
+            font-size: 18px;
             color: #9ca3af;
-            max-width: 640px;
-            margin: 0 auto 32px;
+            max-width: 560px;
+            margin-top: 8px;
         }
 
-        .hero-cta {
+        /* product grid — minimal, dark, premium (exactly like the reference but with sneakers) */
+        .collection-section {
+            padding: 20px 0 80px;
+        }
+
+        .section-subhead {
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #7c7f8c;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 600;
+            margin-bottom: 56px;
+            letter-spacing: -0.3px;
+        }
+
+        .sneaker-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: #0a0a0c;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(220, 38, 38, 0.25);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.6);
+        }
+
+        .product-image {
+            aspect-ratio: 1 / 1;
+            background: #121316;
             display: flex;
-            gap: 16px;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
+            padding: 28px;
         }
 
-        .btn-primary {
-            background: #dc2626;
-            border: none;
-            padding: 12px 32px;
-            border-radius: 40px;
-            font-weight: 600;
-            color: white;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 16px;
+        /* high-end sneaker visuals — dark / moody, no generic placeholders */
+        .product-image img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 12px 12px rgba(0,0,0,0.5));
+            transition: transform 0.3s;
         }
 
-        .btn-primary:hover {
-            background: #b91c1c;
-            transform: translateY(-2px);
+        .product-card:hover .product-image img {
+            transform: scale(1.02);
         }
 
-        .btn-secondary {
+        .product-info {
+            padding: 20px 20px 24px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .product-sub {
+            font-size: 12px;
+            color: #8b8f9c;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f97316;
+            margin-bottom: 16px;
+        }
+
+        .btn-dark {
             background: transparent;
-            border: 1px solid #40444f;
-            padding: 12px 32px;
+            border: 1px solid #33363f;
+            padding: 8px 0;
+            width: 100%;
             border-radius: 40px;
-            font-weight: 600;
+            font-weight: 500;
             color: #e5e7eb;
             cursor: pointer;
             transition: all 0.2s;
         }
 
-        /* product showcase grid — premium sneaker imagery */
-        .products-section {
-            padding: 40px 0 100px;
-        }
-
-        .section-title {
-            font-size: 42px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .section-sub {
-            text-align: center;
-            color: #9ca3af;
-            margin-bottom: 56px;
-            font-size: 18px;
-        }
-
-        .sneaker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: #111318;
-            border-radius: 28px;
-            overflow: hidden;
-            transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(220, 38, 38, 0.3);
-            box-shadow: 0 25px 40px -12px rgba(220,38,38,0.2);
-        }
-
-        .product-image {
-            aspect-ratio: 1 / 1;
-            background: linear-gradient(145deg, #1a1d24, #0f1117);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 32px;
-            position: relative;
-        }
-
-        /* premium shoe images – high quality, modern sneaker visuals */
-        .product-image img {
-            width: 100%;
-            max-width: 260px;
-            height: auto;
-            filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.5));
-            transition: transform 0.4s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.03);
-        }
-
-        .product-info {
-            padding: 24px 24px 28px;
-            text-align: center;
-        }
-
-        .product-name {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .product-desc {
-            font-size: 14px;
-            color: #9ca3af;
-            margin-bottom: 18px;
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .current-price {
-            font-size: 28px;
-            font-weight: 800;
-            color: #f97316;
-        }
-
-        .old-price {
-            font-size: 16px;
-            color: #6b7280;
-            text-decoration: line-through;
-        }
-
-        .btn-card {
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid rgba(220, 38, 38, 0.4);
-            padding: 10px 0;
-            width: 100%;
-            border-radius: 40px;
-            font-weight: 600;
-            color: #fca5a5;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-card:hover {
+        .btn-dark:hover {
             background: #dc2626;
-            color: white;
             border-color: #dc2626;
+            color: white;
         }
 
-        /* feature strip */
-        .features-strip {
+        /* bottom footer / legal area — like the reference's "底部文字" */
+        .footer-links {
+            margin-top: 100px;
+            padding: 48px 0 56px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
-            justify-content: center;
-            gap: 48px;
             flex-wrap: wrap;
-            padding: 48px 0;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            margin: 20px 0 60px;
+            justify-content: space-between;
+            gap: 40px;
         }
 
-        .feature-item {
+        .footer-col {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .footer-col h4 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            color: #9ca3af;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #b9c2d4;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .footer-col li:hover {
+            color: white;
+        }
+
+        .copyright {
             text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        /* footer */
-        .footer {
-            text-align: center;
-            padding: 48px 0 40px;
+            padding: 24px 0 40px;
+            font-size: 12px;
             color: #6b7280;
-            font-size: 14px;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.03);
         }
 
-        @media (max-width: 760px) {
-            .container {
+        @media (max-width: 1000px) {
+            .sneaker-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .hero-visual h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .site-wrapper {
                 padding: 0 20px;
             }
-            .hero h1 {
-                font-size: 44px;
-            }
-            .section-title {
-                font-size: 32px;
+            .sneaker-grid {
+                grid-template-columns: 1fr;
             }
             .nav-links {
                 gap: 20px;
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header class="site-header">
-        <div class="nav">
-            <div class="logo">ANDLI<span style="color:#dc2626; font-weight:800;">.</span></div>
-            <div class="nav-links">
-                <a href="#">Shop</a>
-                <a href="#">Series</a>
-                <a href="#">Technology</a>
-                <a href="#">Journal</a>
-            </div>
-            <button class="btn-outline-light">Explore collection →</button>
+<div class="site-wrapper">
+    <!-- header area -->
+    <div class="top-bar">
+        <div class="logo">ANDLI<span style="color:#dc2626;">//</span></div>
+        <div class="nav-links">
+            <a href="#">COLLECTION</a>
+            <a href="#">SERIES</a>
+            <a href="#">TECH</a>
+            <a href="#">EDITORIAL</a>
         </div>
-    </header>
+        <div style="font-size: 13px; letter-spacing:1px;">⚡ DROP 01</div>
+    </div>
 
-    <main>
-        <!-- Hero section – dynamic, no placeholder background image -->
-        <div class="hero">
-            <div class="hero-badge">LIMITED DROP • SPRING 2026</div>
-            <h1>Engineered for the extreme.</h1>
-            <p>Built for those who never quit. Tactical-grade materials meet street-ready design. Every step, a statement.</p>
-            <div class="hero-cta">
-                <button class="btn-primary">⚡ SHOP NOW</button>
-                <button class="btn-secondary">View Catalog</button>
-            </div>
+    <!-- main hero – exactly inspired by the image: dark, split-sphere graphic & bold type -->
+    <div class="hero-visual">
+        <div class="main-graphic">
+            <!-- premium SVG graphic: split sphere / tactical core, exactly as reference mood -->
+            <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="250" cy="200" r="140" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="6 6" fill="none"/>
+                <circle cx="250" cy="200" r="110" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" fill="none"/>
+                <path d="M250 60 L250 340 M110 200 L390 200" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+                <circle cx="250" cy="200" r="40" fill="#dc2626" fill-opacity="0.2" stroke="#dc2626" stroke-width="1.5"/>
+                <circle cx="250" cy="200" r="18" fill="#dc2626" fill-opacity="0.7"/>
+                <path d="M200 150 L300 250 M300 150 L200 250" stroke="#dc2626" stroke-opacity="0.5" stroke-width="1.2"/>
+                <rect x="215" y="270" width="70" height="8" rx="4" fill="#dc2626" fill-opacity="0.4"/>
+            </svg>
         </div>
+        <h1>ANDLI</h1>
+        <div class="hero-tagline">Engineered for the extreme. Built for those who never quit.</div>
+    </div>
 
-        <!-- Premium sneaker showcase – all images replaced with high-end shoe visuals -->
-        <div class="products-section">
-            <h2 class="section-title">Tactical Performance Series</h2>
-            <div class="section-sub">Military‑inspired engineering • Carbon fiber reinforcements • Vibram® grip</div>
+    <!-- product showcase: premium sneaker images exactly like the dark luxury vibe -->
+    <div class="collection-section">
+        <div class="section-subhead">Tactical Performance</div>
+        <div class="section-title">Series 01 / Urban Armor</div>
 
-            <div class="sneaker-grid">
-                <!-- Product 1: ShadowStrike Runner – premium tactical runner image -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="ShadowStrike Runner – high performance tactical sneaker">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">ShadowStrike Runner</div>
-                        <div class="product-desc">Lightweight armorweave • breathable mesh</div>
-                        <div class="price-row">
-                            <span class="current-price">$179</span>
-                            <span class="old-price">$229</span>
-                        </div>
-                        <button class="btn-card">Secure your pair →</button>
-                    </div>
+        <div class="sneaker-grid">
+            <!-- SHADOWSTRIKE RUNNER — premium tactical runner image (military / stealth) -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ShadowStrike Runner tactical sneaker">
                 </div>
-
-                <!-- Product 2: PhantomForce Low – premium black / stealth sneaker -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="PhantomForce Low – stealth urban sneaker">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">PhantomForce Low</div>
-                        <div class="product-desc">Stealth rubber outsole • 3M reflective details</div>
-                        <div class="price-row">
-                            <span class="current-price">$159</span>
-                            <span class="old-price">$199</span>
-                        </div>
-                        <button class="btn-card">Secure your pair →</button>
-                    </div>
+                <div class="product-info">
+                    <div class="product-name">ShadowStrike Runner</div>
+                    <div class="product-sub">Carbon fiber plate • breathable Kevlar</div>
+                    <div class="price">$179</div>
+                    <button class="btn-dark">Secure pair</button>
                 </div>
+            </div>
 
-                <!-- Product 3: Urban Assault Mid – high-top tactical boot / sneaker hybrid -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="Urban Assault Mid – mid-top tactical sneaker">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Urban Assault Mid</div>
-                        <div class="product-desc">Reinforced ankle support • gore-tex lining</div>
-                        <div class="price-row">
-                            <span class="current-price">$199</span>
-                            <span class="old-price">$259</span>
-                        </div>
-                        <button class="btn-card">Secure your pair →</button>
-                    </div>
+            <!-- PHANTOMFORCE LOW — stealth black sneaker, high contrast -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600" alt="PhantomForce Low stealth sneaker">
                 </div>
+                <div class="product-info">
+                    <div class="product-name">PhantomForce Low</div>
+                    <div class="product-sub">Stealth outsole • 3M reflective</div>
+                    <div class="price">$159</div>
+                    <button class="btn-dark">Secure pair</button>
+                </div>
+            </div>
 
-                <!-- Product 4: Inferno Trail – trail-ready aggressive sneaker -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" 
-                             alt="Inferno Trail – extreme grip tactical trail runner">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-name">Inferno Trail</div>
-                        <div class="product-desc">Aggressive lug pattern • flame-resistant upper</div>
-                        <div class="price-row">
-                            <span class="current-price">$169</span>
-                            <span class="old-price">$209</span>
-                        </div>
-                        <button class="btn-card">Secure your pair →</button>
-                    </div>
+            <!-- URBAN ASSAULT MID — mid-top tactical hybrid -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Urban Assault Mid tactical boot sneaker">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Urban Assault Mid</div>
+                    <div class="product-sub">GORE-TEX® • ankle stabilizer</div>
+                    <div class="price">$199</div>
+                    <button class="btn-dark">Secure pair</button>
+                </div>
+            </div>
+
+            <!-- INFERNO TRAIL — aggressive trail runner -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Inferno Trail extreme grip sneaker">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Inferno Trail</div>
+                    <div class="product-sub">Vibram® Megagrip • rock plate</div>
+                    <div class="price">$169</div>
+                    <button class="btn-dark">Secure pair</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- premium features / brand assets (no generic images) -->
-        <div class="features-strip">
-            <div class="feature-item">
-                <div class="feature-icon">🧵</div>
-                <div>Kevlar® reinforced</div>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">⚡</div>
-                <div>Adaptive cushioning</div>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">🌍</div>
-                <div>Carbon-neutral footprint</div>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">🛡️</div>
-                <div>2-year warranty</div>
-            </div>
+    <!-- footer: exactly like the reference layout with multiple columns + bottom text -->
+    <div class="footer-links">
+        <div class="footer-col">
+            <h4>EXPLORE</h4>
+            <ul>
+                <li>MIT PC</li>
+                <li>TWORKS</li>
+                <li>MUSIC</li>
+                <li>PROCESSION/EMERGIE</li>
+            </ul>
         </div>
-    </main>
-
-    <footer class="footer">
-        <p>ANDLI — Tactical Precision / Urban Performance</p>
-        <p style="margin-top: 12px;">© 2026 ANDLI. Engineered for the extreme.</p>
-    </footer>
+        <div class="footer-col">
+            <h4>CONCEPT</h4>
+            <ul>
+                <li>MACROBUTCH</li>
+                <li>RIGOCOP</li>
+                <li>POWER</li>
+                <li>FLEXIBLE</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>CONNECT</h4>
+            <ul>
+                <li>CONTACT LIFE</li>
+                <li>Doubtit avec 1.4m² pouvis</li>
+                <li>Trendériser l'ensemble</li>
+                <li>Traduire synchronisé</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>LEGACY</h4>
+            <ul>
+                <li>ENGINEERING</li>
+                <li>EXTREME TESTING</li>
+                <li>WARRANTY</li>
+                <li>ARCHIVE</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 ANDLI — Tactical Luxury Division. All rights reserved.
+    </div>
 </div>
 
 </body>
